@@ -15,12 +15,17 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.lightBlueAccent,
       ),
       body: Center(
-        child:Text('Text test tses',style: TextStyle(
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
-          fontFamily: 'IndieFlower',
+        child:Image(
+            image:AssetImage('assets/2.jpg')
         )
-        ),
+//        Text('Text test tses',style: TextStyle(
+//          fontSize: 20,
+//          fontWeight: FontWeight.bold,
+//          fontFamily: 'IndieFlower',
+//
+//        ),
+
+        //),
       ),
       bottomNavigationBar: BottomAppBar(
         shape: const CircularNotchedRectangle(),
