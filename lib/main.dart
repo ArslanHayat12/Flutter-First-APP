@@ -15,9 +15,14 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.lightBlueAccent,
       ),
       body: Center(
-        child:Image(
-            image:AssetImage('assets/2.jpg')
+        child:Icon(
+          Icons.add_a_photo,
+          color: Colors.lightBlueAccent,
+          size: 70,
         )
+//        Image(
+//            image:AssetImage('assets/2.jpg')
+//        )
 //        Text('Text test tses',style: TextStyle(
 //          fontSize: 20,
 //          fontWeight: FontWeight.bold,
