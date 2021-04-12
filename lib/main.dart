@@ -2,20 +2,25 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Scaffold(
+    home:Home()
+  ));
+}
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
         title:Text('My First App'),
         centerTitle: true,
         backgroundColor: Colors.lightBlueAccent,
       ),
       body: Center(
-          child:Text('Text test tses',style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            fontFamily: 'IndieFlower',
-          ),),
-
-
+        child:Text('Text test tses',style: TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+          fontFamily: 'IndieFlower',
+        )
+        ),
       ),
       bottomNavigationBar: BottomAppBar(
         shape: const CircularNotchedRectangle(),
@@ -30,6 +35,6 @@ void main() {
         backgroundColor: Colors.lightBlueAccent,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-    ),
-  ));
+    );
+  }
 }
