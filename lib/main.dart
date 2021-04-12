@@ -9,10 +9,10 @@ void main() {
         backgroundColor: Colors.lightBlueAccent,
       ),
       body: Center(
-          child:Text('Text',style: TextStyle(
-            color: Colors.lightGreenAccent,
+          child:Text('Text test tses',style: TextStyle(
             fontSize: 20,
-            fontWeight: FontWeight.bold
+            fontWeight: FontWeight.bold,
+            fontFamily: 'IndieFlower',
           ),),
 
 
