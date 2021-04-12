@@ -15,11 +15,16 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.lightBlueAccent,
       ),
       body: Center(
-        child:Icon(
-          Icons.add_a_photo,
-          color: Colors.lightBlueAccent,
-          size: 70,
+        child:ElevatedButton.icon(
+          onPressed: (){print("Elevated Button");},
+            icon: Icon(Icons.mail),
+          label: Text('click Me')
         )
+//        Icon(
+//          Icons.add_a_photo,
+//          color: Colors.lightBlueAccent,
+//          size: 70,
+//        )
 //        Image(
 //            image:AssetImage('assets/2.jpg')
 //        )
