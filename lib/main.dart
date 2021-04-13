@@ -14,13 +14,22 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.lightBlueAccent,
       ),
-      body: Center(
-        child:ElevatedButton.icon(
-          onPressed: (){print("Elevated Button");},
+      body: Column(
+        mainAxisAlignment:MainAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children:<Widget>[Container(
+          color:Colors.greenAccent,
+          child: Text('Hello'),
+        ),
+          ElevatedButton.icon(
+            onPressed: (){print("Elevated Button");},
             icon: Icon(Icons.mail),
-          label: Text('click Me')
+            label: Text('click Me')
         )
-//        Icon(
+        ],
+
+
+ //        Icon(
 //          Icons.add_a_photo,
 //          color: Colors.lightBlueAccent,
 //          size: 70,
