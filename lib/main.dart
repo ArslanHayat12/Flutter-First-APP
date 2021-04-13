@@ -1,71 +1,98 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home:Home()
-  ));
+  runApp(MaterialApp(home: Home()));
 }
+
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title:Text('My First App'),
-        centerTitle: true,
-        backgroundColor: Colors.lightBlueAccent,
-      ),
-      body: Row(
-        children:<Widget>[Expanded(
-            flex: 3,
-            child:Container(
-
-          color:Colors.greenAccent,
-          padding: EdgeInsets.all(30.0),
-          child: Text('Hello'),
-        )),
-          Expanded(flex: 2,child:Container(
-            color:Colors.lightBlue,
-            padding: EdgeInsets.all(30.0),
-            child: Text('Hello'),
-          )),
-          Expanded(flex: 1,child:Container(
-            color:Colors.redAccent,
-            padding: EdgeInsets.all(30.0),
-            child: Text('Hello'),
-          ))
-        ],
-
-
- //        Icon(
-//          Icons.add_a_photo,
-//          color: Colors.lightBlueAccent,
-//          size: 70,
-//        )
-//        Image(
-//            image:AssetImage('assets/2.jpg')
-//        )
-//        Text('Text test tses',style: TextStyle(
-//          fontSize: 20,
-//          fontWeight: FontWeight.bold,
-//          fontFamily: 'IndieFlower',
-//
-//        ),
-
-        //),
-      ),
-      bottomNavigationBar: BottomAppBar(
-        shape: const CircularNotchedRectangle(),
-        child: Container(
-          height: 50.0,
+        backgroundColor: Colors.grey[850],
+        appBar: AppBar(
+          title: Text('My First App'),
+          centerTitle: true,
+          backgroundColor: Colors.grey[700],
+          elevation: 0.0,
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => print("Clicked"),
-        tooltip: 'Increment Counter',
-        child: const Icon(Icons.add),
-        backgroundColor: Colors.lightBlueAccent,
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-    );
+        body: Padding(
+            padding: EdgeInsets.fromLTRB(30, 40, 30, 0),
+            child: Column(
+              children: <Widget>[
+                Container(
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                      Center(
+                          child: CircleAvatar(
+                        child: Image.asset("assets/2.jpg"),
+                        radius: 40,
+                      )),
+                      Divider(
+                        height: 60.0,
+                        color: Colors.grey,
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Text("Name",
+                          style: TextStyle(
+                              color: Colors.cyan, letterSpacing: 2.0)),
+                      Text("Chung Li",
+                          style: TextStyle(
+                              color: Colors.amber,
+                              letterSpacing: 2.0,
+                              fontSize: 28,
+                              fontWeight: FontWeight.bold)),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Text("Current Ninja Level",
+                          style: TextStyle(
+                              color: Colors.cyan, letterSpacing: 2.0)),
+                      Text("8",
+                          style: TextStyle(
+                              color: Colors.amber,
+                              letterSpacing: 2.0,
+                              fontSize: 28,
+                              fontWeight: FontWeight.bold)),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0.0, 0, 8.0, 0),
+                            child: Icon(
+                              Icons.email,
+                              color: Colors.grey,
+                            ),
+                          ),
+                          Text("ninja@g.com",
+                              style: TextStyle(
+                                color: Colors.grey,
+                                letterSpacing: 2.0,
+                                fontSize: 14,
+                              ))
+                        ],
+                      )
+                    ])),
+                Container(),
+                Container(),
+              ],
+            )));
+  }
+  
+}
+class Dynamic extends StatefulWidget {
+  @override
+  _DynamicState createState() => _DynamicState();
+}
+
+class _DynamicState extends State<Dynamic> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
+
