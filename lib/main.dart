@@ -4,7 +4,14 @@ void main() {
   runApp(MaterialApp(home: Home()));
 }
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
+
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  int ninjaCounter=0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,6 +21,13 @@ class Home extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.grey[700],
           elevation: 0.0,
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: (){setState((){
+            ninjaCounter+=1;
+          });},
+          child: Icon(Icons.add),
+          backgroundColor: Colors.grey[700],
         ),
         body: Padding(
             padding: EdgeInsets.fromLTRB(30, 40, 30, 0),
@@ -50,7 +64,7 @@ class Home extends StatelessWidget {
                       Text("Current Ninja Level",
                           style: TextStyle(
                               color: Colors.cyan, letterSpacing: 2.0)),
-                      Text("8",
+                      Text("$ninjaCounter",
                           style: TextStyle(
                               color: Colors.amber,
                               letterSpacing: 2.0,
@@ -81,18 +95,6 @@ class Home extends StatelessWidget {
                 Container(),
               ],
             )));
-  }
-  
-}
-class Dynamic extends StatefulWidget {
-  @override
-  _DynamicState createState() => _DynamicState();
-}
-
-class _DynamicState extends State<Dynamic> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }
 
