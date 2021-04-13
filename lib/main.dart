@@ -14,18 +14,25 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.lightBlueAccent,
       ),
-      body: Column(
-        mainAxisAlignment:MainAxisAlignment.end,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children:<Widget>[Container(
+      body: Row(
+        children:<Widget>[Expanded(
+            flex: 3,
+            child:Container(
+
           color:Colors.greenAccent,
+          padding: EdgeInsets.all(30.0),
           child: Text('Hello'),
-        ),
-          ElevatedButton.icon(
-            onPressed: (){print("Elevated Button");},
-            icon: Icon(Icons.mail),
-            label: Text('click Me')
-        )
+        )),
+          Expanded(flex: 2,child:Container(
+            color:Colors.lightBlue,
+            padding: EdgeInsets.all(30.0),
+            child: Text('Hello'),
+          )),
+          Expanded(flex: 1,child:Container(
+            color:Colors.redAccent,
+            padding: EdgeInsets.all(30.0),
+            child: Text('Hello'),
+          ))
         ],
 
 
