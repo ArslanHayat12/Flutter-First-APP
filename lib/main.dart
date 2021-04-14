@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'quote.dart';
+import 'quote_card.dart';
 
 void main() {
   runApp(MaterialApp(home: QuoteList()));
@@ -12,9 +13,14 @@ class QuoteList extends StatefulWidget {
 
 class _QuoteListState extends State<QuoteList> {
   int ninjaCounter = 0;
+
   @override
   Widget build(BuildContext context) {
     List<Quote> quotes = [
+      Quote(text: "A", author: "A"),
+      Quote(text: "B", author: "B"),
+      Quote(text: "C", author: "C"),
+      Quote(text: "D", author: "D"),
       Quote(text: "A", author: "A"),
       Quote(text: "B", author: "B"),
       Quote(text: "C", author: "C"),
@@ -30,11 +36,7 @@ class _QuoteListState extends State<QuoteList> {
         ),
         body: Column(
             children: quotes.map((quote) {
-          return Text('${quote.text} - ${quote.author}',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 32,
-              ));
+          return  QuoteCard(quote:quote);
         }).toList()));
   }
 }
