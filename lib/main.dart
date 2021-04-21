@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'quote.dart';
 import 'quote_card.dart';
+import 'location.dart';
 
 void main() {
-  runApp(MaterialApp(home: QuoteList()));
+  runApp(MaterialApp(initialRoute: '/location',routes: {
+    "/quote":(context)=>QuoteList(),
+    "/location":(context)=>Location()
+  },));
 }
 
 class QuoteList extends StatefulWidget {
@@ -34,9 +38,10 @@ class _QuoteListState extends State<QuoteList> {
           return QuoteCard(
               quote: quote,
               delete: () {
-                setState(() {
-                  quotes.remove(quote);
-                });
+                Navigator.pushNamed(context, "/location");
+//                setState(() {
+//                  quotes.remove(quote);
+//                });
               });
         }).toList()));
   }
